@@ -71,10 +71,6 @@ endif
 
 " Language Specific {{{
 
-" ASCII {{{
-  Plug 'AnsiEsc.vim', {'on': 'AnsiEsc'}
-" }}}
-
 " Clojure {{{
   Plug 'guns/vim-sexp', {'for': ['clojure', 'lisp', 'scheme']}
   Plug 'tpope/vim-fireplace', {'for': 'clojure'}
@@ -110,20 +106,12 @@ endif
   Plug 'mxw/vim-jsx'
 " }}}
 
-" PHP {{{
-  Plug 'joonty/vdebug'
-" }}}
-
 " Ruby {{{
   Plug 'ecomba/vim-ruby-refactoring'
   Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
   Plug 'sunaku/vim-ruby-minitest'
   Plug 'tpope/vim-rails', {'for': ['ruby', 'eruby', 'yaml', 'haml', 'javascript', 'coffee', 'sass', 'scss']}
   Plug 'vim-ruby/vim-ruby', {'for': ['ruby', 'eruby']}
-" }}}
-
-" Terraform {{{
-  Plug 'hashivim/vim-terraform'
 " }}}
 
 " Typescript {{{

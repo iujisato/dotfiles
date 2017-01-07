@@ -1,8 +1,6 @@
 alias ack='ack-grep'
 alias cls='printf "\033c"'
 alias ccat='pygmentize -g -O style=monokai -f console256 -g'
-alias vi='nvim'
-alias vim='nvim'
 alias server='python -m SimpleHTTPServer'
 alias h='homesick'
 alias find-trailing='find . -type f -exec egrep -l " +$" {} \;'
@@ -47,13 +45,3 @@ alias s='ssh'
 # Git
 alias gcln='git clone'
 alias gdc='git diff --cached'
-
-# Vagrant
-alias v='vagrant'
-alias vdestroy='vagrant destroy'
-alias vhalt='vagrant halt'
-alias vprovision='vagrant provision'
-alias vreload='vagrant reload'
-alias vssh='vagrant ssh'
-alias vst='vagrant status'
-alias vup='vagrant up'

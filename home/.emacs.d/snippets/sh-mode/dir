@@ -1,4 +1,0 @@
-# key: dir
-# name: dir
-# --
-DIR=$(dirname "\$0")
