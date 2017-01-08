@@ -2,8 +2,11 @@
 " of the .vimrc file
 
 " Save current file
-nnoremap <leader>s :w<CR>
-inoremap <leader>s <Esc>:w<CR>
+nnoremap <leader>w :w<CR>
+inoremap <leader>w <Esc>:w<CR>
+
+" Quit current file
+nnoremap <leader>q :q<CR>
 
 " Toggle paste mode
 nnoremap <silent> <leader>z :set paste!<CR>
@@ -16,12 +19,9 @@ nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
 " Inserts one break before and one break after the current line
-if has('nvim')
+if has('vim')
   autocmd FileType * if &l:modifiable | nnoremap <buffer> <M-Enter> O<Esc>jo<Esc>ki| endif
 endif
-
-" Quit current file
-nnoremap <leader>q :q<CR>
 
 " Indent current paragraph
 nnoremap <leader>a =ip
@@ -107,12 +107,6 @@ nnoremap <silent> <leader>m :SyntasticCheck<CR>
 " Start external command with !
 nnoremap ! :!
 
-" Invert ; and :
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
-
 " CtrlSF (search)
 nmap <leader>f <Plug>CtrlSFPrompt
 vmap <leader>f <Plug>CtrlSFVwordPath
@@ -128,3 +122,8 @@ vnoremap * :<C-u>call VSetSearch()<CR>/<CR>
 vnoremap # :<C-u>call VSetSearch()<CR>?<CR>
 
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
+" NerdTree configs
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <C-\> :NERDTreeToggle<CR>
