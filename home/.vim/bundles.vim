@@ -11,30 +11,25 @@ endif
 " }}}
 
 " Color Schemes {{{
-  Plug 'cartolari/vim-niji', {'for': ['clojure', 'lisp', 'scheme']}
-  Plug 'reedes/vim-colors-pencil'
-  Plug 'sjl/badwolf'
-  Plug 'trapd00r/neverland-vim-theme'
+  Plug 'kristijanhusak/vim-hybrid-material'
 " }}}
 
 " Completions and Snippets {{{
-  Plug 'git@github.com:cartolari/vim-clevertab.git', {'dir': '~/code/vim-clevertab/'}
   Plug 'honza/vim-snippets'
   Plug 'jiangmiao/auto-pairs'
   Plug 'sirver/ultisnips'
   Plug 'tpope/vim-endwise', {'for': ['ruby', 'sh', 'zsh', 'vim', 'c', 'cpp']}
   Plug 'valloric/youcompleteme', {
-        \ 'do': './install.py --clang-completer --gocode-completer --tern-completer'
-        \ }
+          \ 'do': './install.py --tern-completer'
+          \ }
 " }}}
 
 " File and Search {{{
   Plug 'scrooloose/nerdtree'
   Plug 'dyng/ctrlsf.vim'
   Plug 'henrik/vim-indexed-search'
-  Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': 'yes \| ./install'}
+  Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
   Plug 'junegunn/fzf.vim'
-  Plug 'shougo/denite.nvim'
 " }}}
 
 " General Programming {{{
@@ -50,7 +45,6 @@ endif
   Plug 'scrooloose/syntastic'
   Plug 'sjl/gundo.vim'
   Plug 'terryma/vim-multiple-cursors'
-  Plug 'tommcdo/vim-exchange'
   Plug 'tommcdo/vim-exchange'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-abolish'

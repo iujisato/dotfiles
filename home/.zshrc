@@ -1,7 +1,7 @@
 unsetopt nomatch
 
 export UPDATE_ZSH_DAYS=7
-ZSH_THEME="agnoster"
+ZSH_THEME="3den"
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -10,49 +10,44 @@ ZSH_CUSTOM=~/.zsh
 
 plugins=(
   autojump
-  aws
   colored-man-pages
   command-not-found
   docker
   docker-compose
   git
-  terraform
-  vagrant
 )
 
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-source ~/.azure-completion.zsh
-
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PATH=$PATH:/home/bruno/.npm/bin
-export PATH=$PATH:/home/bruno/.local/bin
+export PATH=$PATH:/home/iujisato/.npm/bin
+export PATH=$PATH:/home/iujisato/.local/bin
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.homesick/repos/dotfiles/home/.config/base16-shell/base16-material.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Disable software control flow
 stty -ixon
 
 export GOPATH=~/go
-export EDITOR=nvim
-export PATH=$PATH:/home/bruno/bin
-export PATH=$PATH:/home/bruno/scripts
+export EDITOR=vim
+export PATH=$PATH:/home/iujisato/bin
+export PATH=$PATH:/home/iujisato/scripts
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/bruno/.gem/ruby/2.3.0/bin
+export PATH=$PATH:/home/iujisato/.gem/ruby/2.r.0/bin
 export PATH=$PATH:/usr/bin/core_perl
 
 if [[ -z "$TMUX" ]]
 then
   tmux attach-session -t "$USER" || tmux new-session -s "$USER"
 fi
-if [[ -n ${INSIDE_EMACS} ]]; then
-  # This shell runs inside an Emacs *shell*/*term* buffer.
-  unsetopt zle
-fi
 export FZF_DEFAULT_COMMAND='ag -l -g ""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.homesick/repos/dotfiles/home/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.homesick/repos/dotfiles/home/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -8,6 +8,12 @@ inoremap <leader>w <Esc>:w<CR>
 " Quit current file
 nnoremap <leader>q :q<CR>
 
+" Quit all open files
+nnoremap <leader>qa :qa<CR>
+
+" Save current file and quit
+nnoremap <leader>x :x<CR>
+
 " Toggle paste mode
 nnoremap <silent> <leader>z :set paste!<CR>
 
@@ -99,13 +105,7 @@ augroup END
 
 inoremap <silent> <CR> <C-r>=ExpandSnippetOrCarriageReturn()<CR>
 
-nnoremap <silent> <leader>t :Denite buffer file_rec<CR>
-
-" Make
-nnoremap <silent> <leader>m :SyntasticCheck<CR>
-
-" Start external command with !
-nnoremap ! :!
+nnoremap <silent> <leader>t :FZF<CR>
 
 " CtrlSF (search)
 nmap <leader>f <Plug>CtrlSFPrompt
@@ -123,7 +123,13 @@ vnoremap # :<C-u>call VSetSearch()<CR>?<CR>
 
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
+" FZF search (ctrl+p)
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <leader>p :FZF<cr>
+
 " NerdTree configs
-autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-\> :NERDTreeToggle<CR>
+map <leader>\ :NERDTreeToggle<CR>

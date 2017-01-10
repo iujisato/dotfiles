@@ -48,10 +48,7 @@ set shortmess+=c " Quiet completions
 set splitright
 set updatetime=250
 set colorcolumn=80
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme badwolf
+colorscheme hybrid_material
 " }}}
 
 " Highlight {{{
@@ -71,8 +68,8 @@ function! HideOverLength()
   endif
 endfunction
 
-command HideOverLength call HideOverLength()
-command ShowOverLength call ShowOverLength()
+command! HideOverLength call HideOverLength()
+command! ShowOverLength call ShowOverLength()
 " }}}
 
 augroup markdown " {{{
@@ -124,29 +121,6 @@ if executable('ag')
 end
 " }}}
 
-" Syntastic {{{
-let g:syntastic_aggregate_errors = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-      \ "mode": "passive",
-      \ "active_filetypes": [],
-      \ "passive_filetypes": [] }
-
-let g:syntastic_error_symbol='✗'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_warning_symbol = '⚠'
-
-" Ruby
-let g:syntastic_ruby_rubocop_exec = '~/rubocop.sh'
-let g:syntastic_ruby_checkers = ['rubocop', 'mri', 'reek']
-
-" Haml
-let g:syntastic_haml_checkers = ['haml-lint']
-" }}}
 
 " Ale {{{
 let g:ale_echo_msg_error_str = 'E'
@@ -287,6 +261,10 @@ let g:yankring_dot_repeat_yank = 1
 let g:yankring_clipboard_monitor = 0
 " }}}
 
+" Clipboard {{{
+  set clipboard=unnamed
+" }}}
+
 " Ultisnips {{{
 let g:UltiSnipsUsePythonVersion = 3
 " }}}
@@ -307,22 +285,6 @@ let g:vdebug_options = {
       \ }
 " }}}
 
-" Denite {{{
-call denite#custom#var('file_rec', 'command', ['rg', '--files', '--hidden', '--glob', '!.git'])
-call denite#custom#source('file_rec', 'sorters', ['sorter_sublime_multiprocess'])
-call denite#custom#map('insert', '<C-n>', 'move_to_next_line')
-call denite#custom#map('insert', '<C-p>', 'move_to_prev_line')
-call denite#custom#option('default', 'winheight', 10)
-
-hi link deniteMatched Underline
-hi link deniteMatchedChar DiffText
-
-augroup filetype_denite
-  autocmd!
-  autocmd FileType denite call s:denite_keymapping()
-augroup END
-" }}}
-
 " GitGutter {{{
 let g:gitgutter_async = 1
 let g:gitgutter_realtime = 1
@@ -334,7 +296,7 @@ augroup CreateDir
   au BufWritePre,FileWritePre * call <SID>CreateAndSaveDirectory()
 augroup END
 
-function s:CreateAndSaveDirectory()
+function! s:CreateAndSaveDirectory()
   let s:directory = expand('<afile>:p:h')
   if !isdirectory(s:directory)
     call mkdir(s:directory, 'p')
