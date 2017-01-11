@@ -34,8 +34,8 @@ nnoremap <leader>a =ip
 
 " Edit vimrc
 nnoremap <leader>ev :edit $MYVIMRC<CR>
-nnoremap <leader>eb :edit ~/.vim/bundles.vim<CR>
-nnoremap <leader>ek :edit ~/.vim/keymaps.vim<CR>
+nnoremap <leader>eb :edit ~/.homesick/dotfiles/home/.vim/bundles.vim<CR>
+nnoremap <leader>ek :edit ~/.homesick/dotfiles/home/.vim/keymaps.vim<CR>
 
 "Netrw
 nnoremap - :Explore<CR>
@@ -133,3 +133,4 @@ nnoremap <leader>p :FZF<cr>
 " NerdTree configs
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <leader>\ :NERDTreeToggle<CR>
+map <leader>r :NERDTreeFind<CR>

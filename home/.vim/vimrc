@@ -188,23 +188,8 @@ let g:buftabline_separators = 1
 let g:lightline.colorscheme = 'Tomorrow_Night'
 " }}}
 
-" Switch {{{
-autocmd FileType ruby let b:switch_custom_definitions =
-  \ [
-  \   {
-  \     'validates_\(\w\+\)_of\s\+\(:\w\+\)': 'validates \2, \1: true',
-  \     'validates\s\+:\(\w\+\),\s\+\(\w\+\):\s\+true':     'validates_\2_of :\1',
-  \   },
-  \ ]
-" }}}
-
 " Vim test {{{
 let g:test#strategy = 'vtr'
-" }}}
-
-" Localvimrc  {{{
-let g:localvimrc_persistent = 1
-let g:localvimrc_sandbox = 0
 " }}}
 
 " FZF {{{
@@ -275,14 +260,6 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 
 " Gundo {{{
 let g:gundo_prefer_python3 = 1
-" }}}
-
-" Vim Debug {{{
-let g:vdebug_options = {
-      \ 'path_maps': {
-      \ '/var/www/dc-commerce': '/home/bruno/code/vizir/dc-commerce/www/dc-commerce'
-      \ }
-      \ }
 " }}}
 
 " GitGutter {{{

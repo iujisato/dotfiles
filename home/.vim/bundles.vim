@@ -5,7 +5,6 @@ if has('vim_starting')
 endif
 
 " Libs {{{
-  Plug 'kana/vim-textobj-user'
   Plug 'tpope/vim-repeat'
   Plug 'vim-scripts/l9'
 " }}}
@@ -37,18 +36,13 @@ endif
         \ 'ruby', 'eruby', 'coffee', 'python',
         \ 'javascript', 'html', 'xml', 'css',
         \ 'scss', 'less', 'yaml', 'vim' ]}
-  Plug 'andrewradev/switch.vim'
-  Plug 'embear/vim-localvimrc'
   Plug 'godlygeek/tabular'
   Plug 'janko-m/vim-test'
-  Plug 'majutsushi/tagbar'
-  Plug 'scrooloose/syntastic'
   Plug 'sjl/gundo.vim'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tommcdo/vim-exchange'
   Plug 'tomtom/tcomment_vim'
   Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-projectionist'
   Plug 'tpope/vim-rsi'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
@@ -60,7 +54,6 @@ endif
 " Integrations {{{
   Plug 'airblade/vim-gitgutter'
   Plug 'christoomey/vim-tmux-runner'
-  Plug 'gregsexton/gitv'
   Plug 'tpope/vim-fugitive'
 " }}}
 
