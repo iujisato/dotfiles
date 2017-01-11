@@ -7,6 +7,7 @@ endif
 " Libs {{{
   Plug 'tpope/vim-repeat'
   Plug 'vim-scripts/l9'
+  Plug 'kana/vim-textobj-user'
 " }}}
 
 " Color Schemes {{{

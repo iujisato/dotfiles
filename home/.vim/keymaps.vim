@@ -34,8 +34,8 @@ nnoremap <leader>a =ip
 
 " Edit vimrc
 nnoremap <leader>ev :edit $MYVIMRC<CR>
-nnoremap <leader>eb :edit ~/.homesick/dotfiles/home/.vim/bundles.vim<CR>
-nnoremap <leader>ek :edit ~/.homesick/dotfiles/home/.vim/keymaps.vim<CR>
+nnoremap <leader>eb :edit ~/.homesick/repos/dotfiles/home/.vim/bundles.vim<CR>
+nnoremap <leader>ek :edit ~/.homesick/repos/dotfiles/home/.vim/keymaps.vim<CR>
 
 "Netrw
 nnoremap - :Explore<CR>
