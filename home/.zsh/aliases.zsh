@@ -46,6 +46,7 @@ alias s='ssh'
 alias gcln='git clone'
 alias gdc='git diff --cached'
 alias gpf='git diff --force-with-lease'
+alias gmnff='git merge --no-ff'
 
 # Vizir Deployer
 alias deployer='~/Projects/automated-deploy/dist/vizir-deployer.sh'
