@@ -134,3 +134,6 @@ nnoremap <leader>p :FZF<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <leader>\ :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<CR>
+
+" Set visual lines to comapre identations
+nnoremap <leader>t :set cursorline! <CR> <bar> :set cursorcolumn!<CR>
