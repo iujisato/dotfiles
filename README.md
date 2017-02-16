@@ -12,5 +12,8 @@
   - Available on package-manager.
 
 ### Arch Linux based systems
+- ZSH plugins
+  - Clone [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) and [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) to target folders.
 - YouCompleteMe AUR
-  - Arch Wiki isntructions page [https://wiki.archlinux.org/index.php/YouCompleteMe]
+  - [Arch Wiki instructions page](https://wiki.archlinux.org/index.php/YouCompleteMe)
+  - Enable login shell on [`konsole terminal`](http://askubuntu.com/questions/503859/making-konsole-to-be-login-shell-by-default)
