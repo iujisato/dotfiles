@@ -15,6 +15,7 @@ endif
 " }}}
 
 " Completions and Snippets {{{
+  Plug 'neitanod/vim-clevertab'
   Plug 'honza/vim-snippets'
   Plug 'jiangmiao/auto-pairs'
   Plug 'sirver/ultisnips'
