@@ -10,3 +10,7 @@
 - Oh my zsh! [https://github.com/robbyrussell/oh-my-zsh]
 - Tmux [https://github.com/tmux/tmux]
   - Available on package-manager.
+
+### Arch Linux based systems
+- YouCompleteMe AUR
+  - Arch Wiki isntructions page [https://wiki.archlinux.org/index.php/YouCompleteMe]
