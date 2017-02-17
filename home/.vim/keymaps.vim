@@ -131,6 +131,9 @@ let g:fzf_action = {
 nnoremap <leader>p :FZF<cr>
 
 " NerdTree configs
+let g:NERDTreeIgnore=['\~$', 'vendor', 'tmp', '.git/']
+let NERDTreeShowHidden=1
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <leader>\ :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<CR>
