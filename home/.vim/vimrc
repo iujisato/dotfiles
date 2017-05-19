@@ -48,11 +48,12 @@ set shortmess+=c " Quiet completions
 set splitright
 set updatetime=250
 set colorcolumn=80
-colorscheme hybrid_material
+colorscheme dichromatic
 " }}}
 
 " Highlight {{{
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+highlight ColorColumn ctermbg=red
 
 " Marks the 81st column of lines wider than 80 characters
 function! ShowOverLength()

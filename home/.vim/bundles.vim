@@ -11,7 +11,8 @@ endif
 " }}}
 
 " Color Schemes {{{
-  Plug 'kristijanhusak/vim-hybrid-material'
+  Plug 'petelewis/vim-evolution'
+  " Plug 'kristijanhusak/vim-hybrid-material'
 " }}}
 
 " Completions and Snippets {{{
@@ -88,9 +89,14 @@ endif
   Plug 'suan/vim-instant-markdown', {'for': 'markdown', 'do': 'npm install -g instant-markdown-d'}
 " }}}
 
+" NodeJS {{{
+  Plug 'jelera/vim-javascript-syntax'
+  Plug 'moll/vim-node'
+" }}}
+
 " JavaScript {{{
   Plug 'cartolari/JavaScript-Indent', {'for': ['javascript', 'html']}
-  Plug 'drslump/vim-syntax-js', {'for': ['javascript', 'html', 'haml']}
+  Plug 'drslump/vim-syntax-js', {'for':
   Plug 'marijnh/tern_for_vim', {'for': ['html', 'javascript'], 'do': 'npm install'}
   Plug 'mxw/vim-jsx'
 " }}}
