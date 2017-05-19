@@ -6,7 +6,8 @@ let mapleader = ","
 " Vimscripts {{{
 source ~/.vim/bundles.vim
 source ~/.vim/keymaps.vim
-runtime macros/matchit.vim " match the opening/closign html tag when pressing '%'
+" match the opening/closing html tag when pressing '%'
+runtime macros/matchit.vim
 " }}}
 
 " Vim options {{{
@@ -53,7 +54,7 @@ colorscheme dichromatic
 
 " Highlight {{{
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-highlight ColorColumn ctermbg=red
+highlight ColorColumn ctermbg=black
 
 " Marks the 81st column of lines wider than 80 characters
 function! ShowOverLength()

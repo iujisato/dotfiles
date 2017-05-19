@@ -10,11 +10,6 @@ endif
   Plug 'kana/vim-textobj-user'
 " }}}
 
-" Color Schemes {{{
-  Plug 'petelewis/vim-evolution'
-  " Plug 'kristijanhusak/vim-hybrid-material'
-" }}}
-
 " Completions and Snippets {{{
   Plug 'honza/vim-snippets'
   Plug 'jiangmiao/auto-pairs'
