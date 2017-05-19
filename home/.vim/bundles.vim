@@ -96,7 +96,7 @@ endif
 
 " JavaScript {{{
   Plug 'cartolari/JavaScript-Indent', {'for': ['javascript', 'html']}
-  Plug 'drslump/vim-syntax-js', {'for':
+  Plug 'drslump/vim-syntax-js', {'for': ['javascript', 'html', 'haml']}
   Plug 'marijnh/tern_for_vim', {'for': ['html', 'javascript'], 'do': 'npm install'}
   Plug 'mxw/vim-jsx'
 " }}}
