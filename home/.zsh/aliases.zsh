@@ -47,6 +47,8 @@ alias gcln='git clone'
 alias gdc='git diff --cached'
 alias gpf='git diff --force-with-lease'
 alias gmnff='git merge --no-ff'
+alias grhs='git reset HEAD~1'
+alias grhh='git reset --hard HEAD~1'
 
 # Vizir Deployer
 alias deployer='~/Projects/automated-deploy/dist/vizir-deployer.sh'
