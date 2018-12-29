@@ -45,8 +45,18 @@ alias s='ssh'
 # Git
 alias gcln='git clone'
 alias gdc='git diff --cached'
-alias gpf='git diff --force-with-lease'
+alias gpf='git push --force-with-lease'
 alias gmnff='git merge --no-ff'
+
+# Git worktree
+alias gwt='git worktree'
+alias gwta='git worktree add'
+alias gwtad='git worktree add --detach'
+alias gwtl='git worktree list'
+alias gwtlock='git worktree lock'
+alias gwtunlock='git worktree unlock'
+alias gwtpr='git worktree prune -v'
+
 
 # Vizir Deployer
 alias deployer='~/Projects/automated-deploy/dist/vizir-deployer.sh'
