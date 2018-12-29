@@ -18,9 +18,7 @@ dnsmasq
 docker-compose
 git
 homesick
-hosts-gen
 htop
-letsencrypt-cli
 npm
 postgresql-libs
 pv
@@ -46,27 +44,26 @@ google-chrome
 )
 
 python_packages=(
-aws-shell
 pgcli
 ptpython
 py-mini-racer
 vim-vint
 )
 
-pacaur_install () {
+install () {
   package=$1
   echo "Installing $package"
   set +e
-  pacaur -Qs "$package" > /dev/null
+  trizen -Qs "$package" > /dev/null
   if [[ $? -eq 0 ]]; then
     return
   fi
   set -e
-  pacaur -S --noconfirm --noedit "$package"
+  trizen -S --noconfirm --noedit "$package"
 }
 
 for package in "${arch_packages[@]}"; do
-  pacaur_install "$package"
+  install "$package"
 done
 
 for package in "${python_packages[@]}"; do
