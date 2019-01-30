@@ -1,5 +1,12 @@
 unsetopt nomatch
 
+# Android path variables
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$ANDROID_HOME/emulator:$PATH"
+
 export UPDATE_ZSH_DAYS=7
 ZSH_THEME="3den"
 DISABLE_AUTO_TITLE="true"
