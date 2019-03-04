@@ -116,13 +116,8 @@ fi
 
 alias cls='printf "\033c"'
 alias ccat='pygmentize -g -O style=monokai -f console256 -g'
-# alias rails='if [[ -x bin/rails ]]; then bin/rails; else env rails; fi'
-# alias rake='if [[ -x bin/rake ]]; then bin/rake; else env rake; fi'
-# alias bundle='if [[ -x bin/bundle ]]; then bin/bundle; else env bundle; fi'
-# alias rspec='if [[ -x bin/rspec ]]; then bin/rspec; else env rspec; fi'
 export JAVA_HOME=/usr/local/java/jre1.7.0_60
 export PATH=$HOME/npm/bin:$PATH
 export PATH=$PATH:/usr/local/java/jre1.7.0_60/bin
-# export TERM="xterm-256color"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source /home/iujisato/.pgvm/pgvm_env

@@ -57,6 +57,8 @@ alias gwtlock='git worktree lock'
 alias gwtunlock='git worktree unlock'
 alias gwtpr='git worktree prune -v'
 
-
 # Vizir Deployer
 alias deployer='~/Projects/automated-deploy/dist/vizir-deployer.sh'
+
+# Android
+alias emulator='~/Android/emulator/emulator'
