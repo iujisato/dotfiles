@@ -15,14 +15,9 @@ endif
 " }}}
 
 " Completions and Snippets {{{
-  Plug 'neitanod/vim-clevertab'
   Plug 'honza/vim-snippets'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'sirver/ultisnips'
   Plug 'tpope/vim-endwise', {'for': ['ruby', 'sh', 'zsh', 'vim', 'c', 'cpp']}
-  Plug 'valloric/youcompleteme', {
-          \ 'do': './install.py --tern-completer'
-          \ }
 " }}}
 
 " File and Search {{{

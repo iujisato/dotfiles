@@ -16,7 +16,6 @@ plugins=(
   docker-compose
   git
 )
-
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -49,8 +48,8 @@ export FZF_DEFAULT_COMMAND='ag -l -g ""'
 
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -64,3 +63,8 @@ gitWorktreeCheckout() {
 }
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Android path variables
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH="$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
