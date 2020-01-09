@@ -6,25 +6,36 @@ set -euo pipefail
 IFS=$'\n\t'
 
 brew_packages=(
-  autojump
+  autojump # use command j to access directories
   tmux
   git
   wget
-  gnupg2
+  gnupg2 # gpg2 for ssh keys
   zsh
-  zsh-completions
+  zsh-completions # zsh plugin for autocomplete
   google-chrome
-  the_silver_searcher
+  the_silver_searcher # used for Ag and vim-ag
   cmake
-  macvim
-  reattach-to-user-namespace
-  slack
-  yarn
-  htop
+  macvim # vim with clipboard and python support
+  reattach-to-user-namespace # to send tmux copy to clipboard
+  yarn # js package manager
+  htop # process manager cli
+  python # python 3
+  libpq # postgresql dev kit (without postgresql client)
+  openvpn # vpn
 )
 
 cask_brew_packages=(
-  iterm2
+  iterm2 # terminal
+  slack
+  istat-menus # system monitoring
+  spotify
+  bitwarden # password manager
+  reactotron # intercept react-native requests
+  insomnia # rest/graphql client
+  kap # screen recorder
+  moom # window resizer
+  discord #
 )
 
 python_packages=(

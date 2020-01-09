@@ -5,6 +5,8 @@ ZSH_THEME="3den"
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
+# Prevent slow paste on macOS
+DISABLE_MAGIC_FUNCTIONS="true"
 
 ZSH_CUSTOM=~/.zsh
 
@@ -31,7 +33,6 @@ BASE16_SHELL="$HOME/.homesick/repos/dotfiles/home/.config/base16-shell/base16-ma
 # Disable software control flow
 stty -ixon
 
-export GOPATH=~/go
 export EDITOR=vim
 export PATH=$PATH:/home/iujisato/bin
 export PATH=$PATH:/home/iujisato/scripts
@@ -68,3 +69,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH="$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
+
+# Export pip on home brew installs
+export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"

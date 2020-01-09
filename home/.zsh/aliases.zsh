@@ -56,3 +56,6 @@ alias gwtl='git worktree list'
 alias gwtlock='git worktree lock'
 alias gwtunlock='git worktree unlock'
 alias gwtpr='git worktree prune -v'
+
+# iOS simulator
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'

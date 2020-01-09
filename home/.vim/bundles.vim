@@ -101,6 +101,7 @@ endif
 
 " Typescript {{{
   Plug 'leafgarland/typescript-vim'
+  Plug 'ianks/vim-tsx'
 " }}}
 
 " Tmux {{{
